@@ -19,11 +19,14 @@ def listarFilmes():
 
 # Sortear filmes da lista
 def sortear():
-    index = random.randint(0, len(filmes))
-    print(index)
-    print(filmes[index])
-    filmes.pop(index)
-    
+    if len(filmes) > 0 :
+        index = random.randint(0, len(filmes) - 1)
+        print(index)
+        print(filmes[index])
+        filmes.pop(index)
+    else:
+        print("Acabou a lista! \n Adicione mais filmes.")
+        
 while True:
     print("Lista de Filmes")
     print("1 -- Ver Lista")
